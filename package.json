@@ -1,0 +1,11 @@
+{
+  "name": "rwd",
+  "version": "1.0.0",
+  "description": "Responsive Web Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raman Hira",
+  "license": "ISC"
+}
