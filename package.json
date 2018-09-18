@@ -2,10 +2,19 @@
   "name": "rwd",
   "version": "1.0.0",
   "description": "Responsive Web Design",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Raman Hira",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
