@@ -11,3 +11,6 @@ npm-debug.log*
 
 # Temporary builds
 dist/
+
+# package-lock.json
+package-lock.json
