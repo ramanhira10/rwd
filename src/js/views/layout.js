@@ -6,9 +6,12 @@ import LayoutTemplate from '../templates/layout.html';
 
 export default class TodoView extends View {
 
-  constructor(options)
-  {
-    options.template = LayoutTemplate;
+  get template () {
+    return LayoutTemplate;
+  }
+
+  constructor(options)  {
+
     options.el = '#app-hook';
     options.regions = {
       form: '.form',

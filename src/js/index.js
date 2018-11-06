@@ -3,21 +3,21 @@ import '../styles/styles.less';
 import TodoView from './views/layout';
 import TodoModel from './models/todo';
 
-const initialData = [{
-    assignee: 'Scott',
-    text: 'Write a book about Marionette'
-  }, {
-    assignee: 'Andrew',
-    text: 'Do some coding'
-  }
-];
-
 export class TodoApp extends Mn.Application {
 
-  onStart (options) {
+  onStart () {
+
+    let bbCollection = new Backbone.Collection([{
+        assignee: 'Scott',
+        text: 'Write a book about Marionette'
+      }, {
+        assignee: 'Andrew',
+        text: 'Do some coding'
+      }
+    ]);
 
     const todoView = new TodoView({
-      collection: new Backbone.Collection(options.initialData),
+      collection: bbCollection,
       model: new TodoModel()
     });
 
@@ -26,4 +26,4 @@ export class TodoApp extends Mn.Application {
 }
 
 var app = new TodoApp;
-app.start({initialData: initialData});
+app.start();

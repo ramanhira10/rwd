@@ -14,6 +14,7 @@ export default class FormView extends View {
   triggers() {
 
     return {
+
       submit: 'add:todo:item'
     };
   }
@@ -21,6 +22,7 @@ export default class FormView extends View {
   modelEvents() {
 
     return {
+
       change: 'render'
     };
   }

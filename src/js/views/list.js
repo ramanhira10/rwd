@@ -14,10 +14,11 @@ class Todo extends View {
 
 export default class ListView extends Mn.CollectionView {
 
-  constructor(options) {
-    options.tagName = 'ul';
-    options.childView = Todo;
+  get tagName () {
+    return 'ul';
+  }
 
-    super(options);
+  get childView () {
+    return Todo;
   }
 }
