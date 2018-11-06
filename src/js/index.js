@@ -1,21 +1,29 @@
 import '../styles/styles.less';
 
-import _ from 'lodash';
+import TodoView from './views/layout';
+import TodoModel from './models/todo';
 
-const component = () => {
+const initialData = [{
+    assignee: 'Scott',
+    text: 'Write a book about Marionette'
+  }, {
+    assignee: 'Andrew',
+    text: 'Do some coding'
+  }
+];
 
+export class TodoApp extends Mn.Application {
 
+  onStart (options) {
 
-  let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-  console.log(x);
-  console.log(y);
-  console.log(z);
-  [5, 6].map(n => console.log(n));
+    const todoView = new TodoView({
+      collection: new Backbone.Collection(options.initialData),
+      model: new TodoModel()
+    });
 
-
-  let element = document.createElement('h1');
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  return element;
+    todoView.render();
+  }
 }
 
-document.body.appendChild(component());
+var app = new TodoApp;
+app.start({initialData: initialData});
