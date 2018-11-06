@@ -16,3 +16,6 @@ Plugins can be used to perform a range of tasks like bundle optimization, asset 
 
 By setting the mode parameter to either development, production or none, we can enable webpack's built-in optimizations that correspond to each environment. The default value is production.
 
+Developers break programs into discrete chunks of functionality. These discrete chunks are called as modules.
+
+A resolver (module resolution) is a library which helps in locating a module by its absolute path. 
